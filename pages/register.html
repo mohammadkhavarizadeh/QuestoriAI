@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Questoria AI Register</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+🚀 Join Questoria AI
+</h1>
+
+
+<p>
+Create your player profile
+</p>
+
+
+
+<div class="card">
+
+
+<input 
+id="username"
+placeholder="Enter your name"
+>
+
+
+<br><br>
+
+
+<select id="goal">
+
+<option value="learn">
+🧠 Learn
+</option>
+
+
+<option value="game">
+🎮 Game
+</option>
+
+
+<option value="earn">
+💰 Earn
+</option>
+
+
+</select>
+
+
+
+<br><br>
+
+
+<button onclick="createProfile()">
+
+Create Profile
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<script src="../modules/storage.js"></script>
+
+
+<script>
+
+
+function createProfile(){
+
+
+let user =
+QuestoriaStorage.getUser();
+
+
+
+let name =
+document.getElementById("username").value;
+
+
+
+let goal =
+document.getElementById("goal").value;
+
+
+
+if(name.trim()==""){
+
+alert("Enter your name");
+
+return;
+
+}
+
+
+
+user.name = name;
+
+user.goal = goal;
+
+
+QuestoriaStorage.saveUser(user);
+
+
+
+alert("Welcome to Questoria AI!");
+
+
+
+window.location.href =
+"../index.html";
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>

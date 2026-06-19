@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Questoria AI Mentor</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>🤖 AI Mentor</h1>
+
+
+<p>
+Your personal AI learning guide
+</p>
+
+
+
+<div class="card">
+
+
+<input 
+id="question"
+placeholder="Ask your AI Mentor..."
+>
+
+
+<button onclick="askAI()">
+Ask
+</button>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>AI Response:</h2>
+
+
+<p id="answer">
+Waiting for your question...
+</p>
+
+
+</div>
+
+
+
+<a href="../index.html">
+Back Home
+</a>
+
+
+
+</div>
+
+
+
+<script src="../modules/ai-engine.js"></script>
+
+
+<script>
+
+
+function askAI(){
+
+
+let question =
+document.getElementById("question").value;
+
+
+
+let response =
+AIEngine.answer(question);
+
+
+
+document.getElementById("answer").innerText =
+response;
+
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

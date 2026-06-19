@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Questoria AI - Wallet</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>💰 Questoria Wallet</h1>
+
+
+<div class="card">
+
+
+<h2>Your Balance</h2>
+
+
+<p>
+QuestCoin:
+<span id="coins">
+0
+</span>
+</p>
+
+
+<p>
+XP:
+<span id="xp">
+0
+</span>
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>Exchange Preview</h2>
+
+
+<p>
+1000 QuestCoin = 1 Future Reward Unit
+</p>
+
+
+<p>
+(Exchange system will activate in online version)
+</p>
+
+
+</div>
+
+
+
+<a href="../index.html">
+Back Home
+</a>
+
+
+</div>
+
+
+
+<script src="../modules/storage.js"></script>
+
+
+<script>
+
+
+const user =
+QuestoriaStorage.getUser();
+
+
+
+document.getElementById("coins").textContent =
+user.coins;
+
+
+document.getElementById("xp").textContent =
+user.xp;
+
+
+</script>
+
+
+</body>
+
+</html>

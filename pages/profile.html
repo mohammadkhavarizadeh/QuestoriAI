@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Questoria AI - Profile</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>👤 Player Profile</h1>
+
+
+<div class="card">
+
+
+<h2 id="name">
+Explorer
+</h2>
+
+
+<p>
+Level:
+<span id="level">
+1
+</span>
+</p>
+
+
+<p>
+XP:
+<span id="xp">
+0
+</span>
+</p>
+
+
+<p>
+Coins:
+<span id="coins">
+0
+</span>
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>🏆 Achievements</h2>
+
+
+<ul id="achievements">
+
+</ul>
+
+
+</div>
+
+
+
+<a href="../index.html">
+Back Home
+</a>
+
+
+</div>
+
+
+
+<script src="../modules/storage.js"></script>
+
+
+<script>
+
+
+const user =
+QuestoriaStorage.getUser();
+
+
+
+document.getElementById("name").textContent =
+user.name;
+
+
+document.getElementById("level").textContent =
+user.level;
+
+
+document.getElementById("xp").textContent =
+user.xp;
+
+
+document.getElementById("coins").textContent =
+user.coins;
+
+
+
+const achievementList =
+document.getElementById("achievements");
+
+
+
+if(user.xp >= 100){
+
+achievementList.innerHTML +=
+"<li>⭐ First Level Up</li>";
+
+}
+
+
+
+if(user.coins >= 50){
+
+achievementList.innerHTML +=
+"<li>💰 Coin Collector</li>";
+
+}
+
+
+
+if(user.xp >= 500){
+
+achievementList.innerHTML +=
+"<li>🚀 Quest Master</li>";
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

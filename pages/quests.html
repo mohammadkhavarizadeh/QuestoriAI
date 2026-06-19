@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Questoria AI - Quests</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>🎯 Quest Hub</h1>
+
+<p>
+Complete quests, gain XP and earn Coins.
+</p>
+
+
+
+<div id="questList"></div>
+
+
+
+<a href="../index.html">
+Back Home
+</a>
+
+
+</div>
+
+
+
+
+<script src="../modules/storage.js"></script>
+
+<script src="../modules/xp-system.js"></script>
+
+<script src="../modules/coin-system.js"></script>
+
+<script src="../modules/quest-engine.js"></script>
+
+
+<script>
+
+
+function showQuests(){
+
+
+const quests =
+QuestEngine.getQuests();
+
+
+const box =
+document.getElementById("questList");
+
+
+
+quests.forEach(function(quest){
+
+
+box.innerHTML += 
+
+<div class="card">
+
+
+<h2>${quest.title}</h2>
+
+
+<p>
+Reward:
+${quest.xp} XP
++
+${quest.coins} Coins
+</p>
+
+
+<button onclick="completeQuest(${quest.id})">
+
+Complete
+
+</button>
+
+
+</div>
+
+
+;
+
+
+});
+
+
+}
+
+
+
+function completeQuest(id){
+
+
+QuestEngine.completeQuest(id);
+
+
+alert("Quest Completed!");
+
+
+
+}
+
+
+
+showQuests();
+
+
+</script>
+
+
+</body>
+
+</html>

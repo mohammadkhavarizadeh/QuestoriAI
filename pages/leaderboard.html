@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Questoria AI - Leaderboard</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>🏆 Global Leaderboard</h1>
+
+
+<div class="card">
+
+<h2>Your Ranking</h2>
+
+
+<p>
+Player:
+<span id="playerName">
+Explorer
+</span>
+</p>
+
+
+<p>
+Level:
+<span id="playerLevel">
+1
+</span>
+</p>
+
+
+<p>
+XP:
+<span id="playerXP">
+0
+</span>
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>Top Players</h2>
+
+
+<ol>
+
+
+<li>
+AI Explorer - 5000 XP
+</li>
+
+
+<li>
+Future Creator - 3500 XP
+</li>
+
+
+<li>
+Quest Master - 2500 XP
+</li>
+
+
+<li>
+New Challenger - 1000 XP
+</li>
+
+
+</ol>
+
+
+</div>
+
+
+
+<a href="../index.html">
+Back Home
+</a>
+
+
+
+</div>
+
+
+
+<script src="../modules/storage.js"></script>
+
+
+<script>
+
+
+const user =
+QuestoriaStorage.getUser();
+
+
+
+document.getElementById("playerName").textContent =
+user.name;
+
+
+document.getElementById("playerLevel").textContent =
+user.level;
+
+
+document.getElementById("playerXP").textContent =
+user.xp;
+
+
+</script>
+
+
+
+</body>
+
+</html>

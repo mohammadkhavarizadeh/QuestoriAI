@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Questoria AI Dashboard</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>🚀 Dashboard</h1>
+
+
+<div class="card">
+
+<h2>User Status</h2>
+
+<p>
+Level:
+<span id="level">1</span>
+</p>
+
+
+<p>
+XP:
+<span id="xp">0</span>
+</p>
+
+
+<p>
+Coins:
+<span id="coins">0</span>
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>Daily Progress</h2>
+
+
+<p>
+Complete quests and increase your level.
+</p>
+
+
+</div>
+
+
+
+<a href="../index.html">
+Back Home
+</a>
+
+
+
+</div>
+
+
+
+<script src="../modules/storage.js"></script>
+
+<script>
+
+const user =
+QuestoriaStorage.getUser();
+
+
+document.getElementById("level").textContent =
+user.level;
+
+
+document.getElementById("xp").textContent =
+user.xp;
+
+
+document.getElementById("coins").textContent =
+user.coins;
+
+
+</script>
+
+
+</body>
+
+</html>
