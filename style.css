@@ -284,3 +284,62 @@ button:hover {
     line-height:1.5;
 
 }
+
+body {
+    background: linear-gradient(135deg,#0f172a,#020617);
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+
+.logo {
+    animation: glow 2s infinite alternate;
+}
+
+
+@keyframes glow {
+
+    from {
+        box-shadow:0 0 10px #22c55e;
+    }
+
+    to {
+        box-shadow:0 0 30px #38bdf8;
+    }
+
+}
+
+
+.feature-card {
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    transition:0.3s;
+}
+
+
+.feature-card:hover {
+
+    transform:translateY(-10px);
+}
+
+
+button {
+
+    background:linear-gradient(90deg,#22c55e,#38bdf8);
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+
+}
+
+
+button:hover {
+
+    transform:scale(1.05);
+
+}
